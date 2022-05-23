@@ -3,8 +3,10 @@ services:
     node-app: 
         image: node:16-buster 
         container_name: "node-app" 
-        volumes: - ./:/usr/src/node-app 
+        volumes: 
+            - ./:/usr/src/node-app 
         working_dir: /usr/src/node-app 
-        command: npm run install
+        command: npm  install
         ports:
-        - 3000:3000
+        - "3000:3000"
+        
